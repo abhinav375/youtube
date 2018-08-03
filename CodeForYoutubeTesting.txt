@@ -1,0 +1,44 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+package com.abc;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Test 
+{
+public static void main(String[] args) throws InterruptedException 
+{
+	System.setProperty("webdriver.chrome.driver","H:\\chromedriver.exe");
+	for(int i=1;i<=5;i++)
+	{
+	WebDriver driver = new ChromeDriver();
+driver.manage().timeouts().implicitlyWait(150,TimeUnit.SECONDS) ;
+driver.manage().window().maximize();
+driver.get("https://www.youtube.com/watch?v=MXcPsl9BZTU");
+Thread.sleep(20000);
+driver.quit();
+	
+}
+}
+}
